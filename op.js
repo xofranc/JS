@@ -5,7 +5,7 @@ class Persona {
     email = null,
     edad = null,
     idiom = null,
-
+    telefone = null,
 
   ) {
     this.name = name;
@@ -13,6 +13,7 @@ class Persona {
     this.email = email;
     this.edad = edad;
     this.idiom = idiom;
+    this.telefone = telefone;
     this.nombreCompleto = function () { 
 
       return `Nombre completo:  ${this.name} ${this.apellidos}`;
@@ -48,8 +49,8 @@ let cliente1 = new Persona(
 
 
 
+
 cliente1._name = "Maria" // Usar el setter _name
 console.log(cliente1._name); // Usar el getter _name
 console.log(cliente1.nombreCompleto()); 
 cliente1.saludar();
-
