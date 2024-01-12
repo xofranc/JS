@@ -1,8 +1,6 @@
-let cabecera = document.getElementById('cabecera');
+document.getElementById('titulo').onclick = cambiarTexto;
 
-cabecera.innerHTML = 'El nuevo valor de JS'
-console.log(cabecera);
+function cambiarTexto(titulo) {
 
-let parrafo = document.getElementById('parrafo').innerHTML;
-
-console.log(parrafo);
+  document.getElementById('mostrar').  innerHTML = 'Nuevo Contenido';
+}
