@@ -22,6 +22,7 @@ window.onload = function () {
       //  Crear lineas
       ctx.lineWidth = 5;
       ctx.strokeStyle = "yellow";
+      ctx.fillStyle = "blue";
 
       //iniciamos el trazo de la linea
 
@@ -57,6 +58,7 @@ window.onload = function () {
       ctx.lineTo(100, 150);
       ctx.lineTo(150, 100);
       ctx.lineTo(100, 50);
+      ctx.fill();
       ctx.closePath();
       ctx.stroke();
 
@@ -65,8 +67,44 @@ window.onload = function () {
       ctx.lineTo(500, 150);
       ctx.lineTo(550, 100);
       ctx.lineTo(500, 50);
+      ctx.fill()
       ctx.closePath();
       ctx.stroke();
+
+
+      // Arco
+
+      // relleno de los ojos
+      ctx.fillStyle ='black';
+      
+      ctx.strokeStyle = 'black';
+      ctx.beginPath();
+      ctx.arc(100, 100, 10, 0 * Math.PI, 1.9 * Math.PI)
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.strokeStyle = 'black';
+      ctx.beginPath();
+      ctx.arc(500, 100, 10, 0 * Math.PI, 1.9 * Math.PI)
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = 'yellow';
+      ctx.strokeStyle = 'white';
+      ctx.beginPath();
+      ctx.arc(500, 100, 5, 0 * Math.PI, 1.9 * Math.PI)
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = 'yellow';
+      ctx.strokeStyle = 'white';
+      ctx.beginPath();
+      ctx.arc(100, 100, 5, 0 * Math.PI, 1.9 * Math.PI)
+      ctx.fill();
+      ctx.stroke();
+
+
+
     } else {
       alert("el metodo canvas no es soportado");
     }

@@ -1,4 +1,49 @@
-canvas{
-    background-color: blueviolet;
-    border: solid 3px yellow;
+section{
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
 }
+
+h1 span :first-of-type{
+    color: antiquewhite;
+    font-size: 0.35em;
+}
+
+section :nth-of-type(1){
+    height:100vh;
+}
+
+section :nth-of-type(2){
+    height: 140vh;
+}
+
+@keyframes scale-up{
+    to{ scale: 1.5;}
+}
+
+@keyframes fade-away {
+    to { opacity:0;}
+}
+
+section{
+    view-timeline: --scroll;
+}
+
+h1  span:first-child{
+    animation: fade-away both linear;
+    animation-timeline: --scroll; 
+    animation-range: exit 20% exit 90%;
+}
+
+h1 span :last-child{
+    animation: scale-up both ease-in-out, fade-away both linear; 
+    animation-timeline: --scroll;
+    animation-range: exit 0 exit 100%, exit 50% exit 90%;
+}
+canvas{
+    border: solid 3px #5900d6;
+    background-color: #d8cdff;
+}
+
